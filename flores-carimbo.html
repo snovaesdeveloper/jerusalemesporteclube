@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Jerusalem Esporte Club</title>
+  <title>Jerusalém Esporte Club</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -86,7 +86,7 @@
 
           <li class="nav-item active "><a href="flores-carimbo.html" class="nav-link">FLORES DO CARIMBÓ</a></li>
           <li class="nav-item"><a href="jac-futsal.html" class="nav-link">JECFUTSAL</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">SELFLOVE</a></li>
+          <li class="nav-item"><a href="self-love.html" class="nav-link">SELFLOVE</a></li>
 
           <li class="nav-item"><a href="#" class="nav-link">CONTATO</a></li>
         </ul>
@@ -330,7 +330,7 @@
         <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
           <div class="block-18 text-center">
             <div class="text">
-              <strong class="number" data-number="1">0</strong>
+              <strong class="number" data-number="3">0</strong>
             </div>
             <div class="text">
               <span>Vencedor do prêmio</span>
@@ -573,6 +573,25 @@
     	</div>
     </section> -->
 
+
+  <section class="ftco-section ftco-no-pb">
+    <div class="container">
+      <div class="row justify-content-center pb-5 mb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <span class="subheading"> </span>
+          <h2>Videos</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/OITUa6b6ZrQ?si=saWWm-ZOk91VVeCI"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
   <section class="ftco-section ftco-no-pb">
     <div class="container">
       <div class="row justify-content-center pb-5 mb-3">
@@ -732,14 +751,15 @@
       var horario = document.querySelector(".appointment_time").value;
       var mensagem = document.querySelector("textarea").value;
 
+      var dataFormatada = new Date(data).toLocaleDateString('pt-BR');
+
       var formattedMessage = "Serviço: " + selectedService + "%0A" +
         "Nome: " + nome + "%0A" +
-
-        "Data: " + data + "%0A" +
+        "Data: " + dataFormatada + "%0A" +
         "Horário: " + horario + "%0A" +
         "Mensagem: " + mensagem.replace(/ /g, "+");
 
-      var whatsappLink = "https://wa.me/559199491977901?text=" + formattedMessage;
+      var whatsappLink = "https://api.whatsapp.com/send?phone=559491977901&text=%20" + formattedMessage;
 
       // Abre o link do WhatsApp
       window.open(whatsappLink);
